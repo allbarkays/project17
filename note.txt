@@ -1,0 +1,16 @@
+availability_zone       = data.aws_availability_zones.available.names[count.index]
+
+length(data.aws_availability_zones.available.names) : var.preferred_number_of_private_subnets
+
+length(data.aws_availability_zones.available.names) : length(data.aws_availability_zones.available.names)
+
+
+10.0.0.0/16
+cidrsubnet("10.0.0.0/16", 8, 2)
+
+cidrsubnet("10.0.0.0/16", 4, 2)
+
+"us-east-1"
+
+terraform graph | dot -Tpng > graph.png
+rdsplan.PNG
